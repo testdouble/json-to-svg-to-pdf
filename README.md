@@ -20,7 +20,7 @@ What you'll get is, for each input file, a pair of font-embedded PDFs in
 ## Prerequisites
 
 The PDF generation relies on [librsvg](https://github.com/GNOME/librsvg)'s
-`rsvg-convert` bing being on your path.
+`rsvg-convert` being on your path.
 
 To install it on a Mac with [homebrew](https://brew.sh), run `brew install
 librsvg`.
