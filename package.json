@@ -1,0 +1,37 @@
+{
+  "name": "json-to-svg-to-pdf",
+  "version": "1.0.0",
+  "description": "Converts JSON/CSON input through SVG templates and renders them to PDF using librsvg",
+  "main": "index.js",
+  "bin": "cli.js",
+  "scripts": {
+    "test": "standard"
+  },
+  "devDependencies": {
+    "standard": "^10.0.2"
+  },
+  "dependencies": {
+    "async": "^2.4.0",
+    "cson": "^4.1.0",
+    "glob": "^7.1.1",
+    "minimist": "^1.2.0",
+    "mkdirp": "^0.5.1",
+    "mustache": "^2.3.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/testdouble/json-to-svg-to-pdf.git"
+  },
+  "keywords": [
+    "json",
+    "cson",
+    "svg",
+    "pdf"
+  ],
+  "author": "Justin Searls <searls@gmail.com>",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/testdouble/json-to-svg-to-pdf/issues"
+  },
+  "homepage": "https://github.com/testdouble/json-to-svg-to-pdf#readme"
+}
