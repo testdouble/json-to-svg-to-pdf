@@ -16,6 +16,7 @@ module.exports = function (options, cb) {
   var inputDir = options.inputDir || 'input'
   var tmpDir = options.tmpDir || 'tmp'
   var outputDir = options.outputDir || 'output'
+  var convertTemplate = options.command || 'rsvg-convert -f pdf -o {{{pdf}}} {{{svg}}}'
 
   asink.mapValues(TEMPLATES, function (path, key, cb) {
     fs.readFile(path, 'utf8', cb)
@@ -56,11 +57,17 @@ module.exports = function (options, cb) {
               asink.parallel([
                 function (cb) {
                   var frontPdfPath = outputDir + '/' + svgDatum.name + '-front.pdf'
-                  exec('rsvg-convert -f pdf -o ' + frontPdfPath + ' ' + frontSvgPath, cb)
+                  exec(mustache.render(convertTemplate, {
+                    pdf: frontPdfPath,
+                    svg: frontSvgPath
+                  }), cb)
                 },
                 function (cb) {
                   var backPdfPath = outputDir + '/' + svgDatum.name + '-back.pdf'
-                  exec('rsvg-convert -f pdf -o ' + backPdfPath + ' ' + backSvgPath, cb)
+                  exec(mustache.render(convertTemplate, {
+                    pdf: backPdfPath,
+                    svg: backSvgPath
+                  }), cb)
                 }
               ], cb)
             })

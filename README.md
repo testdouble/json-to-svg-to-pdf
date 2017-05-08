@@ -2,7 +2,8 @@
 
 This is a silly module we wrote to generate business cards. As a result,
 consider this module very
-[YMMV](https://en.wiktionary.org/wiki/your_mileage_may_vary).
+[YMMV](https://en.wiktionary.org/wiki/your_mileage_may_vary). (Spoiler alert:
+the code is intentionally dense for use as a refactoring exercise.)
 
 To use this yourself:
 
