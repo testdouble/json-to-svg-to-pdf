@@ -16,7 +16,7 @@ module.exports = function (options, cb) {
   var inputDir = options.inputDir || 'input'
   var tmpDir = options.tmpDir || 'tmp'
   var outputDir = options.outputDir || 'output'
-  var convertTemplate = options.command || 'rsvg-convert -f pdf -o {{{pdf}}} {{{svg}}}'
+  var convertTemplate = options.command || 'inkscape {{{svg}}} --without-gui --export-pdf={{{pdf}}}'
 
   asink.mapValues(TEMPLATES, function (path, key, cb) {
     fs.readFile(path, 'utf8', cb)
