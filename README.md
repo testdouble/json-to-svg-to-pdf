@@ -20,11 +20,12 @@ What you'll get is, for each input file, a pair of font-embedded PDFs in
 
 ## Prerequisites
 
-The PDF generation relies on [librsvg](https://github.com/GNOME/librsvg)'s
-`rsvg-convert` being on your path.
+The PDF generation relies on [Inkscape](https://inkscape.org/)'s `inkscape`
+binary being on your path.
 
-To install it on a Mac with [homebrew](https://brew.sh), run `brew install
-librsvg`.
+To install it on a Mac with [Homebrew](https://brew.sh) and
+[Homebrew Cask](https://caskroom.github.io/), run
+`brew cask install xquartz inkscape`.
 
 ## TODO
 
