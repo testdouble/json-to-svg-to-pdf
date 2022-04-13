@@ -11,7 +11,7 @@
     "standard": "^10.0.2"
   },
   "dependencies": {
-    "async": "^2.4.0",
+    "async": "^3.2.2",
     "cson": "^4.1.0",
     "glob": "^7.1.1",
     "minimist": "^1.2.0",
